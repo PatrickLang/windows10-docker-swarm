@@ -96,8 +96,8 @@ With both Visualizer and Portainer you could demonstrate scaling services
 
 ## Hyper-V Progress
 
-[ ] Update `windows_10_insider.json` at [StefanScherer/packer-windows](https://github.com/StefanScherer/packer-windows) for hyperv-iso builder
+- [ ] Update `windows_10_insider.json` at [StefanScherer/packer-windows](https://github.com/StefanScherer/packer-windows) for hyperv-iso builder
  - Partially done
  - There is a new keyboard layout / locale prompt that isn't handled by autounattend.xml yet. If you click through it then the Packer build completes normally
-[ ] Fix vm names. They show up as `packer-hyperv-iso` ... 
-[ ] Enable nested virtualization? Required for Hyper-V containers
+- [ ] Fix vm names. They show up as `packer-hyperv-iso` ... 
+- [ ] Enable nested virtualization? Required for Hyper-V containers

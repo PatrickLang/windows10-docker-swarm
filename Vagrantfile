@@ -6,7 +6,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.require_version ">= 1.7.4"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box          = "windows_10_15031"
+  config.vm.box          = "windows_10_15042"
   config.vm.communicator = "winrm"
 
   config.vm.provider "hyperv" do |v|
@@ -50,7 +50,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provision "shell", path: "scripts/add-docker-group.ps1", privileged: false
     config.vm.provision "shell", path: "scripts/set-winrm-delay-autostart.ps1", privileged: false
     config.vm.provision "shell", path: "scripts/install-container-feature.ps1", privileged: false
-    config.vm.provision "reload"
+    # config.vm.provision "reload"
     config.vm.provision "shell", path: "scripts/set-winrm-autostart.ps1", privileged: false
     config.vm.provision "shell", path: "scripts/install-docker.ps1", privileged: false
     config.vm.provision "shell", path: "scripts/set-experimental.ps1", privileged: false

@@ -4,6 +4,9 @@ This is a local setup using Vagrant with VMware Fusion to demonstrate a Windows 
 
 ## Vagrant boxes
 
+This setup uses the `windows_10_insider` box from [StefanScherer/packer-windows](https://github.com/StefanScherer/packer-windows). Be sure to name the box to match the `Vagrantfile` as you load it. For example: `vagrant box add --name windows_10_15042 .\windows_10_insider_hyperv.box`
+
+
 There are three VM's with the following internal network and IP addresses:
 
 | VM        | IP address   | Memory |
@@ -89,3 +92,11 @@ C:\vagrant\scripts\open-portainer-ui.ps1
 With both Visualizer and Portainer you could demonstrate scaling services
 
 ![visualizer and portainer](images/visualizer-portainer.gif)
+
+
+## Hyper-V Progress
+
+[ ] Update `windows_10_insider.json` at [StefanScherer/packer-windows](https://github.com/StefanScherer/packer-windows) for hyperv-iso builder
+ - Partially done
+ - There is a new keyboard layout / locale prompt that isn't handled by autounattend.xml yet. If you click through it then the Packer build completes normally
+[ ] Fix vm names. They show up as `packer-hyperv-iso` ... 

@@ -101,3 +101,4 @@ With both Visualizer and Portainer you could demonstrate scaling services
  - There is a new keyboard layout / locale prompt that isn't handled by autounattend.xml yet. If you click through it then the Packer build completes normally
 - [ ] Fix vm names. They show up as `packer-hyperv-iso` ... 
 - [ ] Enable nested virtualization? Required for Hyper-V containers
+- [ ] Fix reboot after role installation.

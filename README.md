@@ -1,5 +1,20 @@
 # Windows 10 Docker swarm-mode
 
+
+## This is a work-in-progress branch for Hyper-V support
+
+- [ ] Update `windows_10_insider.json` at [StefanScherer/packer-windows](https://github.com/StefanScherer/packer-windows) for hyperv-iso builder
+ - Partially done
+ - There is a new keyboard layout / locale prompt that isn't handled by autounattend.xml yet. If you click through it then the Packer build completes normally
+- [ ] Fix vm names. They show up as `packer-hyperv-iso` ... 
+- [ ] Enable nested virtualization? Required for Hyper-V containers https://github.com/mitchellh/vagrant/pull/8325
+- [ ] Fix reboot after role installation `config.vm.provision "reload"`
+- [ ] Static ip support in Hyper-V provider
+
+
+
+
+
 This is a local setup using Vagrant with VMware Fusion to demonstrate a Windows 10 Docker swarm-mode.
 
 ## Vagrant boxes
@@ -94,12 +109,3 @@ With both Visualizer and Portainer you could demonstrate scaling services
 ![visualizer and portainer](images/visualizer-portainer.gif)
 
 
-## Hyper-V Progress
-
-- [ ] Update `windows_10_insider.json` at [StefanScherer/packer-windows](https://github.com/StefanScherer/packer-windows) for hyperv-iso builder
- - Partially done
- - There is a new keyboard layout / locale prompt that isn't handled by autounattend.xml yet. If you click through it then the Packer build completes normally
-- [ ] Fix vm names. They show up as `packer-hyperv-iso` ... 
-- [ ] Enable nested virtualization? Required for Hyper-V containers https://github.com/mitchellh/vagrant/pull/8325
-- [ ] Fix reboot after role installation `config.vm.provision "reload"`
-- [ ] Static ip support in Hyper-V provider

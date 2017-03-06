@@ -7,9 +7,11 @@
  - Partially done
  - There is a new keyboard layout / locale prompt that isn't handled by autounattend.xml yet. If you click through it then the Packer build completes normally
 - [ ] Fix vm names. They show up as `packer-hyperv-iso` ... 
-- [ ] Enable nested virtualization? Required for Hyper-V containers https://github.com/mitchellh/vagrant/pull/8325
+- [ ] Enable nested virtualization? Required for Hyper-V containers 
+ - Waiting on https://github.com/mitchellh/vagrant/pull/8325
 - [ ] Fix reboot after role installation `config.vm.provision "reload"`
 - [ ] Static ip support in Hyper-V provider
+ - This is in progress but needs to go into a PR to Vagrant
 
 
 
